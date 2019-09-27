@@ -72,15 +72,17 @@ class CryptoFragment : Fragment(), CoinRecycleAdapter.OnItemClickListener {
 
 
     private fun proceedToMarketFragment(selected: String) {
+
         val marketFragment = MarketFragment()
         activity?.supportFragmentManager?.popBackStack(
             null,
             FragmentManager.POP_BACK_STACK_INCLUSIVE
         )
-        var arguments = Bundle()
-        arguments.putString("selected", selected)
 
-        marketFragment.arguments?.putAll(arguments)
+        marketFragment.arguments = Bundle()
+        marketFragment.arguments?.putString("coinId", selected)
+
+
 
 
         val transaction = activity?.supportFragmentManager?.beginTransaction()

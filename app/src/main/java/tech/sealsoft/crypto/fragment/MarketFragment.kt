@@ -3,6 +3,7 @@ package tech.sealsoft.crypto.fragment
 import android.app.Activity
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,6 +41,8 @@ class MarketFragment : Fragment() {
     override fun onAttach(context: Context) {
         super.onAttach(context)
         mContext = context
+        val coinId = arguments?.getString("coinId")
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
