@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "43740761487",
+    "firebase_url": "https://cryptounipi.firebaseio.com",
+    "project_id": "cryptounipi",
+    "storage_bucket": "cryptounipi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:43740761487:android:3e3fc4af2891a98ffe0ffa",
+        "android_client_info": {
+          "package_name": "tech.sealsoft.crypto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "43740761487-hupo1754decp1v366ebvab3jvi1r0tub.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.sealsoft.crypto",
+            "certificate_hash": "06e90503607c665bd5ecffd40fb5a4d9fa98356c"
+          }
+        },
+        {
+          "client_id": "43740761487-fdp685b426raj57a4t4jqforn4kd77r7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCz-71SbbYb6InB9Kk6mVZpeUiYfWpSAWg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "43740761487-fdp685b426raj57a4t4jqforn4kd77r7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
