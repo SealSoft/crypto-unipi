@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         progressBar.visibility = View.VISIBLE
 
         auth = FirebaseAuth.getInstance()
-        if(auth.currentUser != null) {
+        if (auth.currentUser != null) {
             firstFragment = CryptoFragment()
         } else {
             firstFragment = LoginFragment()
@@ -33,5 +33,12 @@ class MainActivity : AppCompatActivity() {
 
         progressBar.visibility = View.GONE
 
+    }
+
+    override fun onDestroy() {
+        if (auth.currentUser != null) {
+            auth.signOut()
+        }
+        super.onDestroy()
     }
 }
