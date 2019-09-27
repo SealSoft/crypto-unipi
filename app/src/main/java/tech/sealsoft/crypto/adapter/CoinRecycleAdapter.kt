@@ -1,7 +1,7 @@
 package tech.sealsoft.crypto.adapter
 
+import android.content.ClipData
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,14 +10,15 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import tech.sealsoft.crypto.R
 import tech.sealsoft.crypto.model.CoinEntity
+import tech.sealsoft.crypto.model.MarketEntity
 
 class CoinRecycleAdapter(val context: Context) : RecyclerView.Adapter<CoinRecycleAdapter.MyViewHolder>() {
 
     var coinList : List<CoinEntity> = listOf()
-    lateinit var mClickListener: OnItemClickListener
+    var mClickListener: OnItemClickListener? = null
 
     interface OnItemClickListener {
-        fun onItemClick(view: View, obj: CoinEntity, position: Int)
+        fun onItemClick(coin: String)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -39,7 +40,7 @@ class CoinRecycleAdapter(val context: Context) : RecyclerView.Adapter<CoinRecycl
         holder.coinPriceUsd.text = coinList[position].priceUsd.toString()
 
         holder.layoutItem.setOnClickListener {
-           Log.d("tag", holder.coinName.text.toString())
+            mClickListener?.onItemClick(holder.coinName.text.toString())
         }
     }
 
@@ -57,4 +58,6 @@ class CoinRecycleAdapter(val context: Context) : RecyclerView.Adapter<CoinRecycl
 
 
     }
+
+
 }

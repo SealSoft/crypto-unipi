@@ -22,7 +22,7 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/layoutMarketItem"
+                android:id="@+id/layoutItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -36,12 +36,12 @@
                     android:text="Symbol:" />
 
                 <TextView
-                    android:id="@+id/marketName"
+                    android:id="@+id/coinName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/spacing_middle"
                     android:layout_marginRight="@dimen/spacing_middle"
-                    android:text="Market Name"
+                    android:text="Coin Name"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                     android:textColor="@color/grey_90" />
 
