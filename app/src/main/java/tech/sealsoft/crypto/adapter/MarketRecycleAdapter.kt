@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import tech.sealsoft.crypto.R
 import tech.sealsoft.crypto.model.MarketEntity
@@ -23,7 +24,9 @@ class MarketRecycleAdapter(val context: Context) :
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-
+        holder.marketName.text = marketList[position].exchangeId
+        holder.marketRank.text = marketList[position].baseSymbol
+        holder.marketVolume.text = marketList[position].volumeUsd24Hr.toString()
     }
 
 
@@ -35,7 +38,9 @@ class MarketRecycleAdapter(val context: Context) :
 
 
     class MyViewHolder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
-
+        val marketName: TextView = itemView!!.findViewById(R.id.exchangeName)
+        val marketRank : TextView = itemView!!.findViewById(R.id.rank)
+        val marketVolume: TextView = itemView!!.findViewById(R.id.volume)
 
     }
 }

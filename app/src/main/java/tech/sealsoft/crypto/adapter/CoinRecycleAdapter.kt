@@ -40,7 +40,7 @@ class CoinRecycleAdapter(val context: Context) : RecyclerView.Adapter<CoinRecycl
         holder.coinPriceUsd.text = coinList[position].priceUsd.toString()
 
         holder.layoutItem.setOnClickListener {
-            mClickListener?.onItemClick(holder.coinName.text.toString())
+            mClickListener?.onItemClick(holder.coinDescription.text.toString())
         }
     }
 

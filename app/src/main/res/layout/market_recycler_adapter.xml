@@ -22,7 +22,7 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/layoutItem"
+                android:id="@+id/layoutMarketItem"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -33,10 +33,10 @@
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Symbol:" />
+                    android:text="Exchange:" />
 
                 <TextView
-                    android:id="@+id/coinName"
+                    android:id="@+id/exchangeName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/spacing_middle"
@@ -46,13 +46,13 @@
                     android:textColor="@color/grey_90" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/exchangeRank"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Name:" />
+                    android:text="Rank:" />
 
                 <TextView
-                    android:id="@+id/description"
+                    android:id="@+id/rank"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/spacing_middle"
@@ -63,13 +63,13 @@
                     android:textColor="@color/grey_40" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/volumeUsd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="USD price:" />
+                    android:text="USD volume:" />
 
                 <TextView
-                    android:id="@+id/priceUsd"
+                    android:id="@+id/volume"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/spacing_middle"

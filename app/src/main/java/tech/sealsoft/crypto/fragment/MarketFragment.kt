@@ -25,7 +25,6 @@ class MarketFragment : Fragment() {
     private lateinit var fragmentView: View
 
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -42,6 +41,14 @@ class MarketFragment : Fragment() {
         super.onAttach(context)
         mContext = context
         val coinId = arguments?.getString("coinId")
+        GlobalScope.launch {
+            var marketList = ServiceHelper.callMarketForCoin(mContext, coinId!!.toLowerCase())
+            if (marketList != null) {
+                (mContext as Activity).runOnUiThread {
+                    marketRecyclerAdapter.setMarketListItems(marketList)
+                }
+            }
+        }
 
     }
 
